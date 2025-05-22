@@ -13,9 +13,8 @@ const config: Config = {
   theme: {
     ...defaultConfig.theme,
     extend: {
-      ...defaultConfig.theme.extend,
+      ...defaultConfig.theme.extend.colors,
       colors: {
-        ...defaultConfig.theme.extend.colors,
         black: "#000000",
         white: "#ffffff",
         zinc: {
