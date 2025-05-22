@@ -1,7 +1,7 @@
 import MobileMenu from "@/components/mobile-menu"
 import PodcastPlayer from "@/components/podcast-player"
 import VideoPlayer from "@/components/video-player"
-import { ChevronRight, Zap, Lightbulb, Package } from "lucide-react"
+import { ChevronRight, Zap, Lightbulb, Package, Mail, Phone, Users } from "lucide-react"
 
 export default function Home() {
   return (
@@ -47,10 +47,15 @@ export default function Home() {
                 of the 100 ARW & 352 SOW.
               </p>
               <div className="hero-buttons">
-                <button className="primary-button">
-                  Explore Our Work
+                <a
+                  href="https://usaf.dps.mil/sites/100ARW/CPI/SitePages/CPI.aspx"
+                  className="primary-button"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Royal Spark SharePoint
                   <ChevronRight className="chevron-right" />
-                </button>
+                </a>
               </div>
             </div>
             <VideoPlayer />
@@ -113,6 +118,76 @@ export default function Home() {
             </div>
             <div className="podcast-container">
               <PodcastPlayer />
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section id="contact" className="contact-section">
+          <div className="section-container">
+            <div className="section-header">
+              <h2 className="section-title">Contact Us</h2>
+              <p className="section-description">
+                Get in touch with the Royal Spark Innovation Lab team to discuss your ideas or learn more about our
+                initiatives.
+              </p>
+            </div>
+            <div className="contact-card">
+              <div className="contact-info">
+                <div className="contact-item">
+                  <div className="contact-icon-container">
+                    <Mail className="contact-icon" />
+                  </div>
+                  <div>
+                    <h3 className="contact-label">Email</h3>
+                    <a href="mailto:100arw.royalspark@us.af.mil" className="contact-value">
+                      100arw.royalspark@us.af.mil
+                    </a>
+                  </div>
+                </div>
+                <div className="contact-item">
+                  <div className="contact-icon-container">
+                    <Phone className="contact-icon" />
+                  </div>
+                  <div>
+                    <h3 className="contact-label">DSN</h3>
+                    <p className="contact-value">314-238-7133</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="contact-team">
+                <div className="contact-team-header">
+                  <Users className="contact-team-icon" />
+                  <h3 className="contact-team-title">Our Team</h3>
+                </div>
+                <ul className="contact-team-list">
+                  <li className="contact-team-member">
+                    <span className="contact-role">Chief Innovation Officer:</span>
+                    <span className="contact-name">Capt Roger Zehr</span>
+                  </li>
+                  <li className="contact-team-member">
+                    <span className="contact-role">Deputy Chief Innovation Officer:</span>
+                    <span className="contact-name">SSgt Austin Dalessandro</span>
+                  </li>
+                  <li className="contact-team-member">
+                    <span className="contact-role">Chief Engagement Officer:</span>
+                    <span className="contact-name">SSgt Jeffrey Michal</span>
+                  </li>
+                  <li className="contact-team-member">
+                    <span className="contact-role">Laboratory Director:</span>
+                    <span className="contact-name">SSgt Justin Gault</span>
+                  </li>
+                  <li className="contact-team-member">
+                    <span className="contact-role">Wing Process Manager:</span>
+                    <span className="contact-name">MSgt Kyle Harmon</span>
+                  </li>
+                  <li className="contact-team-member">
+                    <span className="contact-role">Chief Program Manager:</span>
+                    <span className="contact-name">TBD</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
